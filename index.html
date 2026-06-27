@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pousada Marazul – Londrina/PR | Hospedagem com conforto, lazer e eventos</title>
+<meta name="description" content="Pousada em Londrina-PR com acomodações confortáveis, café da manhã, Wi-Fi, piscina e espaço para eventos. Seu refúgio azul no norte do Paraná. Reserve já!" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* Cores principais */
+    --color-primary: #1F3D2F;
+    --color-accent: #C9A961;
+    --color-cream: #F5EBD8;
+    /* Secundárias */
+    --color-primary-light: #2D5443;
+    --color-accent-dark: #A8893F;
+    --color-white: #FFFFFF;
+    /* Suporte */
+    --color-text-dark: #1A1A1A;
+    --color-text-muted: #6B6B6B;
+    --color-bg-light: #FAFAFA;
+    --color-border: #E5E0D5;
+    --color-whatsapp: #25D366;
+    --color-error: #C0392B;
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+    --radius-full: 999px;
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(31, 61, 47, 0.06);
+    --shadow-md: 0 8px 24px rgba(31, 61, 47, 0.10);
+    --shadow-lg: 0 16px 40px rgba(31, 61, 47, 0.15);
+    --shadow-cta: 0 8px 20px rgba(201, 169, 97, 0.35);
+    /* Espaçamentos */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    --space-7: 96px;
+    --space-8: 128px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { text-decoration: none; color: inherit; }
+
+  ul { list-style: none; }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-inline: 24px;
+  }
+
+  /* Tipografia */
+  h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .script {
+    font-family: 'Great Vibes', cursive;
+    color: var(--color-accent);
+    font-weight: 400;
+  }
+
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+  }
+
+  .section-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    max-width: 60ch;
+  }
+
+  /* Botões */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 16px 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-cta);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1.5px solid var(--color-accent);
+    color: var(--color-accent);
+  }
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .btn-whatsapp {
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+  }
+  .btn-whatsapp:hover,
+  .btn-whatsapp:focus-visible {
+    background: #1ebe5a;
+    transform: translateY(-2px);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* ---------- TOPBAR ---------- */
+  .topbar {
+    background: var(--color-primary);
+    color: var(--color-cream);
+    font-size: 0.875rem;
+  }
+  .topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    padding-block: 10px;
+  }
+  .topbar a:hover { color: var(--color-accent); }
+  .topbar .phone { display: inline-flex; align-items: center; gap: 8px; }
+  .social-links {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+  }
+  .social-links a {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .social-links a:hover { background: var(--color-primary-light); color: var(--color-accent); }
+  .social-links svg { width: 18px; height: 18px; fill: currentColor; }
+
+  /* ---------- HEADER / NAV ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+  }
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+  }
+  .logo span { color: var(--color-accent); }
+
+  .main-nav ul {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+  }
+  .main-nav a {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-dark);
+    padding: 6px 2px;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 2px;
+    background: var(--color-accent);
+    transition: width 0.25s ease;
+  }
+  .main-nav a:hover,
+  .main-nav a:focus-visible { color: var(--color-accent); }
+  .main-nav a:hover::after,
+  .main-nav a:focus-visible::after { width: 100%; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--color-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-white);
+    text-align: left;
+    padding-block: var(--space-8);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.45));
+    z-index: 1;
+  }
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .hero h1 {
+    font-size: 5.5rem;
+    letter-spacing: -1px;
+    color: var(--color-white);
+    max-width: 16ch;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  }
+  .hero h1 .script { display: block; font-size: 6rem; line-height: 1.1; }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    color: var(--color-cream);
+  }
+  .hero-support {
+    max-width: 62ch;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.0625rem;
+  }
+  .hero .btn { margin-top: var(--space-2); }
+
+  /* ---------- Seções genéricas ---------- */
+  section { padding-block: var(--space-7); }
+  .section-light { background: var(--color-bg-light); }
+  .section-cream { background: var(--color-cream); }
+  .section-dark { background: var(--color-primary); color: var(--color-white); }
+  .section-dark .section-text { color: rgba(255, 255, 255, 0.82); }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .split.reverse .media { order: 2; }
+  .split .media img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: cover;
+  }
+  .split-content { display: flex; flex-direction: column; gap: var(--space-2); }
+  .split-content h2 { font-size: 3rem; margin-top: 4px; }
+  .section-dark h2 { color: var(--color-white); }
+  .split-content .btn { align-self: flex-start; margin-top: var(--space-2); }
+
+  /* ---------- Eventos / Celebrações header ---------- */
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+  }
+  .section-head h2 { font-size: 3rem; }
+  .section-head .section-text { text-align: center; }
+
+  /* ---------- Galeria de fotos ---------- */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: var(--space-3);
+  }
+  .gallery-item {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    display: block;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .gallery-item:hover img,
+  .gallery-item:focus-visible img { transform: scale(1.06); }
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(31,61,47,0.35), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gallery-item:hover::after,
+  .gallery-item:focus-visible::after { opacity: 1; }
+  .gallery-tall { grid-row: span 2; }
+  .gallery-wide { grid-column: span 2; }
+
+  /* ---------- Serviços ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+  .service-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .service-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+  }
+  .service-icon {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--color-cream);
+    color: var(--color-accent-dark);
+  }
+  .service-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .service-card h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  /* ---------- Reservas (form) ---------- */
+  .reserva-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .reserva-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-md);
+  }
+  .reserva-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+  }
+  .form-field { margin-bottom: var(--space-2); }
+  .form-field label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-text-dark);
+  }
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .form-field textarea { min-height: 110px; resize: vertical; }
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.25);
+  }
+  .reserva-card .btn { width: 100%; margin-top: var(--space-2); }
+  .reserva-aside { color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: var(--space-2); }
+  .reserva-aside h2 { font-size: 3rem; color: var(--color-white); }
+  .reserva-aside .btn-whatsapp { align-self: flex-start; margin-top: var(--space-2); }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer {
+    background: var(--color-primary);
+    color: var(--color-cream);
+    padding-block: var(--space-7) var(--space-3);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: var(--space-5);
+    margin-bottom: var(--space-5);
+  }
+  .footer-grid h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-accent);
+    margin-bottom: var(--space-2);
+  }
+  .footer-brand .logo { color: var(--color-white); margin-bottom: var(--space-2); }
+  .footer-brand p { color: rgba(245, 235, 216, 0.75); font-size: 0.9375rem; max-width: 34ch; }
+  .footer-grid ul { display: flex; flex-direction: column; gap: 10px; }
+  .footer-grid li, .footer-grid address { font-size: 0.9375rem; color: rgba(245, 235, 216, 0.85); font-style: normal; line-height: 1.7; }
+  .footer-grid a { transition: color 0.2s ease; }
+  .footer-grid a:hover { color: var(--color-accent); }
+  .footer-social { display: flex; gap: var(--space-2); margin-top: var(--space-1); }
+  .footer-social a {
+    width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-light);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .footer-social a:hover { background: var(--color-accent); color: var(--color-primary); transform: translateY(-2px); }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-bottom {
+    border-top: 1px solid var(--color-primary-light);
+    padding-top: var(--space-3);
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: rgba(245, 235, 216, 0.6);
+  }
+
+  /* WhatsApp flutuante */
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 200;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.08); }
+  .whatsapp-float svg { width: 32px; height: 32px; fill: currentColor; }
+
+  /* ---------- Animação sutil ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* ---------- TABLET ---------- */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .container { padding-inline: 32px; }
+  }
+
+  /* ---------- DESKTOP padding lateral ---------- */
+  @media (min-width: 1025px) {
+    .container { padding-inline: 48px; }
+  }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 768px) {
+    .topbar .container { justify-content: center; text-align: center; }
+
+    .nav-toggle { display: flex; }
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      box-shadow: var(--shadow-md);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .main-nav.open { max-height: 560px; }
+    .main-nav ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: var(--space-2) 0;
+    }
+    .main-nav li { border-bottom: 1px solid var(--color-border); }
+    .main-nav a { display: block; padding: 14px 24px; }
+
+    .hero { padding-block: var(--space-7); min-height: 80vh; }
+    .hero h1 { font-size: 3rem; }
+    .hero h1 .script { font-size: 3.5rem; }
+
+    section { padding-block: var(--space-6); }
+
+    .split, .reserva-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+    .split.reverse .media { order: 0; }
+    .split-content h2,
+    .section-head h2,
+    .reserva-aside h2 { font-size: 2rem; }
+    .split-content .btn,
+    .reserva-aside .btn-whatsapp { align-self: stretch; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; gap: var(--space-2); }
+    .gallery-wide, .gallery-tall { grid-column: auto; grid-row: auto; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: var(--space-4); text-align: center; }
+    .footer-brand p { margin-inline: auto; }
+    .footer-grid ul { align-items: center; }
+    .footer-social { justify-content: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <a class="phone" href="tel:+554330000000" aria-label="Ligar para (43) 3000-0000">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+        (43) 3000-0000
+      </a>
+      <ul class="social-links">
+        <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a></li>
+        <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a></li>
+        <li><a href="https://wa.me/554330000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.3-.5-1.9-1.1-.5-.4-.8-1-1.1-1.5-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.4.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg></a></li>
+        <li><a href="mailto:contato@pousadamarazul.com.br" aria-label="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.2L4.5 7v11h15V7L12 12.2zM12 10L19 5.5H5L12 10z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#inicio" class="logo">Pousada <span>Marazul</span></a>
+      <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#a-pousada">A Pousada</a></li>
+          <li><a href="#instalacoes">Instalações</a></li>
+          <li><a href="#fotos">Fotos</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SEÇÃO 1 — HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1600&q=80" aria-hidden="true">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <div class="container">
+        <h1 id="hero-title">Bem-vindo à <span class="script">Pousada Marazul</span></h1>
+        <a href="#a-pousada" class="btn btn-primary">Conheça a Pousada</a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2 — ESPAÇO EMPRESARIAL -->
+    <section class="section-light" id="instalacoes" aria-labelledby="empresarial-title">
+      <div class="container split reveal">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Sala de reuniões equipada para encontros corporativos na Pousada Marazul" loading="lazy" />
+        </div>
+        <div class="split-content">
+          <p class="eyebrow">Espaço Empresarial</p>
+          <h2 id="empresarial-title">Ideal para reuniões, treinamentos e convenções</h2>
+          <p class="section-text">A Marazul oferece estrutura completa para receber sua equipe com produtividade e conforto. Salas equipadas, internet de alta velocidade, coffee break personalizado e estacionamento amplo — tudo no mesmo lugar, a poucos minutos do centro de Londrina.</p>
+          <a href="#reservas" class="btn btn-secondary">Faça sua Reserva</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3 — EVENTOS -->
+    <section class="section-dark" id="eventos" aria-labelledby="eventos-title">
+      <div class="container split reverse reveal">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" alt="Área externa arborizada preparada para celebrações e confraternizações" loading="lazy" />
+        </div>
+        <div class="split-content">
+          <p class="eyebrow">Eventos</p>
+          <h2 id="eventos-title">Transforme seu Evento em uma Lembrança Eterna</h2>
+          <p class="section-text">O cenário perfeito para celebrações e confraternizações</p>
+          <p class="section-text">Áreas externas arborizadas, salões climatizados e equipe especializada para que você se preocupe apenas em aproveitar o momento.</p>
+          <a href="#contato" class="btn btn-secondary">Solicite um Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4 — CELEBRAÇÕES E OCASIÕES ESPECIAIS -->
+    <section class="section-cream" aria-labelledby="celebracoes-title">
+      <div class="container split reveal">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=80" alt="Salão decorado para casamentos, formaturas e aniversários na Pousada Marazul" loading="lazy" />
+        </div>
+        <div class="split-content">
+          <p class="eyebrow">Requinte e Aconchego</p>
+          <h2 id="celebracoes-title">Perfeito para Casamentos, Formaturas e Aniversários</h2>
+          <p class="section-text">Nossos espaços são versáteis e se adaptam à decoração e ao estilo do seu evento. Da cerimônia íntima à grande festa, oferecemos toda a infraestrutura necessária para receber seus convidados com o cuidado que esse dia merece.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section id="fotos" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fotos</p>
+          <h2 id="galeria-title">Conheça nossos espaços</h2>
+          <p class="section-text">Um passeio pelos ambientes que tornam a sua estadia inesquecível.</p>
+        </div>
+        <div class="gallery reveal">
+          <a class="gallery-item gallery-tall" href="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Quarto da Pousada Marazul com cama ampla e decoração aconchegante" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Piscina e área de lazer ao ar livre da pousada" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=80" alt="Recepção e lobby acolhedor da Pousada Marazul" loading="lazy" />
+          </a>
+          <a class="gallery-item gallery-wide" href="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" alt="Área externa arborizada com jardim e espaço para descanso" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=800&q=80" alt="Vista da fachada da pousada ao entardecer" loading="lazy" />
+          </a>
+          <a class="gallery-item gallery-tall" href="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" alt="Café da manhã colonial servido na pousada" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" alt="Banheiro moderno e limpo de uma das acomodações" loading="lazy" />
+          </a>
+          <a class="gallery-item gallery-wide" href="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80" alt="Salão climatizado preparado para eventos e celebrações" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5 — SERVIÇOS E DIFERENCIAIS -->
+    <section id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2 id="servicos-title">Conforto que você merece</h2>
+        </div>
+        <ul class="services-grid reveal">
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M5 19V9h11v4a4 4 0 01-4 4H5zm11-6h2a2 2 0 110 4h-2M7 6V4M10 6V4M13 6V4"/></svg></span>
+            <h4>Café da Manhã Colonial</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8a6 6 0 00-12 0M12 2v1M12 8v0"/><circle cx="12" cy="6" r="3"/></svg></span>
+            <h4>Recepção 24 Horas</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0114 0M8 15.5a6 6 0 018 0M12 19h.01"/></svg></span>
+            <h4>Wi-Fi de Alta Velocidade</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20h14M6 20v-6a6 6 0 0112 0v6M9 8V5a3 3 0 016 0M11 11h2"/></svg></span>
+            <h4>Serviço de Quarto</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17v-5l2-5h10l2 5v5M5 17h14M5 17v2M19 17v2M7.5 17v0M16.5 17v0"/><circle cx="7.5" cy="14" r="1.2"/><circle cx="16.5" cy="14" r="1.2"/></svg></span>
+            <h4>Estacionamento Privativo Gratuito</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16c2-1 3 1 5 0s3 1 5 0 3 1 5 0M5 13a7 7 0 0114 0M9 10V7M15 10V7M12 13V4"/></svg></span>
+            <h4>Piscina e Área de Lazer</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8h15a3 3 0 010 6M3 12h13M6 16a2 2 0 11-2 2M3 8a3 3 0 113 3"/></svg></span>
+            <h4>Ar-Condicionado em Todas as Acomodações</h4>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zM8 21h8M12 17v4M8 9l3 2-3 2"/></svg></span>
+            <h4>TV a Cabo</h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6 — SOBRE A POUSADA -->
+    <section class="section-light" id="a-pousada" aria-labelledby="sobre-title">
+      <div class="container split reverse reveal">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Acomodação aconchegante da Pousada Marazul em região tranquila de Londrina" loading="lazy" />
+        </div>
+        <div class="split-content">
+          <p class="eyebrow">Sobre a Pousada</p>
+          <h2 id="sobre-title">Um pedaço de tranquilidade em Londrina</h2>
+          <p class="section-text">Localizada em uma região privilegiada de Londrina, a Pousada Marazul nasceu da ideia de oferecer um espaço onde o ritmo da cidade dá lugar ao silêncio, ao verde e ao bem-estar. Nossas acomodações foram projetadas para acolher hóspedes que valorizam o cuidado nos detalhes — desde a roupa de cama macia até o aroma do café fresco pela manhã.</p>
+          <p class="section-text">Seja para uma viagem de negócios, uma escapada romântica ou uma visita à família, a Marazul é seu endereço em Londrina.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAS / CONTATO FORM -->
+    <section class="section-dark" id="reservas" aria-labelledby="reservas-title">
+      <div class="container reserva-grid reveal">
+        <div class="reserva-aside">
+          <p class="eyebrow">Reservas</p>
+          <h2 id="reservas-title">Garanta sua estadia na Marazul</h2>
+          <p class="section-text">Preencha o formulário e nossa recepção entra em contato para confirmar sua reserva. Prefere conversar agora? Fale com a gente pelo WhatsApp.</p>
+          <a href="https://wa.me/554330000000?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Pousada%20Marazul." class="btn btn-whatsapp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2zm4.4 12.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.3-.5-1.9-1.1-.5-.4-.8-1-1.1-1.5-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.4.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+        <form class="reserva-card" id="contato" aria-labelledby="form-title" novalidate>
+          <h3 id="form-title">Faça sua Reserva</h3>
+          <div class="form-field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" />
+          </div>
+          <div class="form-field">
+            <label for="checkin">Data de check-in</label>
+            <input type="date" id="checkin" name="checkin" />
+          </div>
+          <div class="form-field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Reserve Agora</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao" aria-labelledby="local-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Localização</p>
+          <h2 id="local-title">Onde estamos</h2>
+          <p class="section-text">Rua [Nome da Rua], 000 — Bairro [Nome], Londrina, Paraná — CEP 86000-000</p>
+        </div>
+        <div class="reveal" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);">
+          <iframe
+            title="Mapa da localização da Pousada Marazul em Londrina, Paraná"
+            src="https://www.google.com/maps?q=Londrina,Paran%C3%A1&output=embed"
+            width="100%" height="380" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">Pousada <span>Marazul</span></p>
+          <p>Seu refúgio azul no coração de Londrina. Conforto, lazer e hospitalidade pensados nos detalhes.</p>
+        </div>
+        <nav aria-label="Navegação do rodapé">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#a-pousada">A Pousada</a></li>
+            <li><a href="#instalacoes">Instalações</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Endereço</h4>
+          <address>
+            Rua [Nome da Rua], 000<br />
+            Bairro [Nome], Londrina, Paraná<br />
+            CEP 86000-000
+          </address>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="tel:+554330000000">+55 (43) 3000-0000</a></li>
+            <li><a href="mailto:contato@pousadamarazul.com.br">contato@pousadamarazul.com.br</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 4.9a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.1a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+            <a href="https://wa.me/554330000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.3-.5-1.9-1.1-.5-.4-.8-1-1.1-1.5-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.4.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
+            <a href="mailto:contato@pousadamarazul.com.br" aria-label="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.2L4.5 7v11h15V7L12 12.2zM12 10L19 5.5H5L12 10z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright 2026 Pousada Marazul | Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/554330000000?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Pousada%20Marazul." class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.3-.5-1.9-1.1-.5-.4-.8-1-1.1-1.5-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.4.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+  </a>
+
+  <script>
+    // Menu mobile
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Animações sutis ao rolar
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(el => io.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Feedback simples do formulário
+    document.querySelector('#contato').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.querySelector('#nome');
+      const email = document.querySelector('#email');
+      if (!nome.value.trim() || !email.value.trim()) {
+        alert('Por favor, preencha nome e e-mail para concluir a reserva.');
+        return;
+      }
+      alert('Obrigado, ' + nome.value.trim() + '! Recebemos sua solicitação de reserva e entraremos em contato em breve.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

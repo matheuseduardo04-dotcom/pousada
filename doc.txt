@@ -1,0 +1,195 @@
+DESIGN SYSTEM
+
+🎨 PALETA DE CORES
+Principal (a alma da marca)
+TokenHexUso--color-primary#1F3D2FVerde floresta escuro — fundos hero, footer, blocos de destaque--color-accent#C9A961Dourado mostarda — CTAs, números, destaques de texto, preços--color-cream#F5EBD8Bege creme — badges, cards de serviço, fundos secundários
+Secundária (apoio)
+TokenHexUso--color-primary-light#2D5443Verde médio — hovers, separadores, variações do fundo--color-accent-dark#A8893FDourado escuro — hover de botões--color-white#FFFFFFTexto principal sobre fundos escuros
+Suporte (neutros e feedback)
+TokenHexUso--color-text-dark#1A1A1ATexto principal sobre fundos claros--color-text-muted#6B6B6BTextos secundários, captions--color-bg-light#FAFAFAFundo de seções claras--color-border#E5E0D5Bordas de inputs e cards--color-whatsapp#25D366Botão exclusivo de WhatsApp (recomendado)--color-error#C0392BValidação de formulário
+
+✍️ TIPOGRAFIA
+Combo sugerido (todas no Google Fonts, gratuitas):
+
+Cormorant Garamond → títulos display (serif elegante)
+Great Vibes → palavras de destaque em script (uso pontual, decorativo)
+Montserrat → corpo e UI (sans-serif geométrica)
+
+Hierarquia
+EstiloFonteTamanhoPesoNotasH1 (Hero)Cormorant Garamond64px / 4rem400Light, letter-spacing -1pxH1 ScriptGreat Vibes72px / 4.5rem400Apenas para 1-2 palavras de destaque (ex: "Marazul", "férias")H2Cormorant Garamond48px / 3rem400Seções principaisH3Montserrat20px / 1.25rem600Uppercase, letter-spacing 2px (subtítulos como "ESPAÇO EMPRESARIAL")H4Montserrat18px / 1.125rem500Títulos de cardsCorpoMontserrat16px / 1rem400Line-height 1.6Corpo SmallMontserrat14px / 0.875rem400Legendas e infos secundáriasCaptionMontserrat12px / 0.75rem500Tags, badges, footerBotãoMontserrat14px / 0.875rem600Uppercase, letter-spacing 1.5px
+
+Mobile: reduzir H1 para 40px, H2 para 32px, manter corpo em 16px.
+
+
+🧩 COMPONENTES
+Botões
+Primário (CTA principal — "Reserve Agora")
+
+Fundo: --color-accent (#C9A961)
+Texto: --color-primary (#1F3D2F), uppercase, 600
+Padding: 16px 36px
+Border-radius: 999px (pill completo)
+Hover: fundo --color-accent-dark, leve translate-y(-2px)
+
+Secundário (outline)
+
+Fundo: transparente
+Borda: 1.5px solid --color-accent
+Texto: --color-accent
+Mesma estrutura do primário
+
+WhatsApp (especial)
+
+Fundo: #25D366
+Texto: branco + ícone WhatsApp à esquerda
+Border-radius: 999px
+Sombra forte (chama atenção como CTA flutuante)
+
+Inputs (formulário de reserva/contato)
+
+Altura: 52px
+Padding: 14px 18px
+Border: 1px solid --color-border
+Border-radius: 12px
+Background: #FFFFFF
+Focus: borda --color-accent, sem outline padrão, leve box-shadow dourado
+Label acima do input, fonte Montserrat 14px, peso 500
+
+Cards (acomodações, serviços, depoimentos)
+
+Background: #FFFFFF ou --color-cream
+Border-radius: 20px
+Padding interno: 32px 28px
+Sombra: ver seção abaixo
+Imagem do card com border-radius: 16px (interna) ou herda o radius externo
+Hover: leve scale(1.02) + sombra mais pronunciada
+
+Badges (lista de serviços — referência da Imagem 2)
+
+Background: --color-cream
+Texto: --color-primary
+Padding: 8px 16px
+Border-radius: 999px (pill)
+Ícone circular à esquerda em fundo dourado claro
+
+
+📐 ESTÉTICA
+Border-radius (escala)
+css--radius-sm: 8px;    /* inputs pequenos, tags */
+--radius-md: 12px;   /* inputs, botões retangulares */
+--radius-lg: 20px;   /* cards principais */
+--radius-xl: 32px;   /* imagens hero, blocos grandes */
+--radius-full: 999px;/* pills, badges, CTAs */
+Sombras
+css--shadow-sm: 0 2px 8px rgba(31, 61, 47, 0.06);     /* sutil, cards padrão */
+--shadow-md: 0 8px 24px rgba(31, 61, 47, 0.10);    /* hover de cards */
+--shadow-lg: 0 16px 40px rgba(31, 61, 47, 0.15);   /* modais, CTAs flutuantes */
+--shadow-cta: 0 8px 20px rgba(201, 169, 97, 0.35); /* glow dourado em CTAs */
+
+Evite sombras pretas puras — usar a cor primária com baixa opacidade mantém a coesão visual.
+
+Espaçamentos (escala base 8px)
+css--space-1: 8px;
+--space-2: 16px;
+--space-3: 24px;
+--space-4: 32px;
+--space-5: 48px;
+--space-6: 64px;
+--space-7: 96px;   /* entre seções principais */
+--space-8: 128px;  /* respiro do hero */
+Regra de ouro: seções grandes da landing devem ter padding-block: 96px (desktop) e 64px (mobile). Respiro generoso é parte da identidade premium.
+Container e grid
+
+Largura máxima: 1240px, centralizado, padding lateral 24px (mobile) / 48px (desktop)
+Grid de cards: 3 colunas desktop, 2 tablet, 1 mobile, com gap de 32px
+
+
+🎯 PRINCÍPIOS DE USO (cola pra não errar)
+
+Hierarquia clara de CTA: só um botão dourado por viewport. Os outros devem ser secundários (outline) ou link de texto.
+Verde escuro domina: use como fundo principal do hero e footer. Seções intermediárias podem alternar com --color-bg-light ou --color-cream pra respirar.
+Script é tempero: Great Vibes só em 1-2 palavras decorativas por página. Mais que isso vira poluição.
+Imagens com border-radius sempre: nunca deixe imagem com canto reto — quebra a estética arredondada da marca.
+Dourado = ação ou destaque numérico (preços, datas, CTAs). Nunca use em corpo de texto longo.
+
+EXTRUTURA 
+TOPBAR (barra superior)
+Telefone: (43) 3000-0000
+
+Ícones de redes: Instagram | Facebook | WhatsApp | E-mail
+
+MENU DE NAVEGAÇÃO
+
+INÍCIO
+A POUSADA
+INSTALAÇÕES
+FOTOS
+RESERVAS
+EVENTOS
+LOCALIZAÇÃO
+CONTATO
+
+
+SEÇÃO 1 — HERO / BANNER PRINCIPAL
+Título principal: BEM-VINDO À POUSADA MARAZUL
+Subtítulo: Seu refúgio azul no coração de Londrina
+Texto de apoio: Conforto, tranquilidade e hospitalidade em um ambiente pensado para quem busca descanso de verdade. Aqui, cada detalhe foi cuidado para que sua estadia seja inesquecível — esteja você a trabalho, em família ou em uma escapada a dois.
+CTA (botão): CONHEÇA A POUSADA
+
+SEÇÃO 2 — ESPAÇO EMPRESARIAL
+Título: ESPAÇO EMPRESARIAL
+Subtítulo: IDEAL PARA REUNIÕES, TREINAMENTOS E CONVENÇÕES
+Texto: A Marazul oferece estrutura completa para receber sua equipe com produtividade e conforto. Salas equipadas, internet de alta velocidade, coffee break personalizado e estacionamento amplo — tudo no mesmo lugar, a poucos minutos do centro de Londrina.
+CTA (botão): FAÇA SUA RESERVA
+
+SEÇÃO 3 — EVENTOS
+Título: Transforme seu Evento em uma Lembrança Eterna
+Subtítulo: O cenário perfeito para celebrações e confraternizações
+Texto de apoio: Áreas externas arborizadas, salões climatizados e equipe especializada para que você se preocupe apenas em aproveitar o momento.
+CTA (botão): SOLICITE UM ORÇAMENTO
+
+SEÇÃO 4 — CELEBRAÇÕES E OCASIÕES ESPECIAIS
+Título: REQUINTE E ACONCHEGO
+Subtítulo: Perfeito para Casamentos, Formaturas e Aniversários
+Texto: Nossos espaços são versáteis e se adaptam à decoração e ao estilo do seu evento. Da cerimônia íntima à grande festa, oferecemos toda a infraestrutura necessária para receber seus convidados com o cuidado que esse dia merece.
+
+SEÇÃO 5 — SERVIÇOS E DIFERENCIAIS
+Título: CONFORTO QUE VOCÊ MERECE
+Subtítulo: Serviços
+Lista de serviços (cards ou ícones):
+
+Café da Manhã Colonial
+Recepção 24 Horas
+Wi-Fi de Alta Velocidade
+Serviço de Quarto
+Estacionamento Privativo Gratuito
+Piscina e Área de Lazer
+Ar-Condicionado em Todas as Acomodações
+TV a Cabo
+
+
+SEÇÃO 6 — SOBRE A POUSADA (opcional, caso queira reforçar a história)
+Título: UM PEDAÇO DE TRANQUILIDADE EM LONDRINA
+Texto: Localizada em uma região privilegiada de Londrina, a Pousada Marazul nasceu da ideia de oferecer um espaço onde o ritmo da cidade dá lugar ao silêncio, ao verde e ao bem-estar. Nossas acomodações foram projetadas para acolher hóspedes que valorizam o cuidado nos detalhes — desde a roupa de cama macia até o aroma do café fresco pela manhã.
+Seja para uma viagem de negócios, uma escapada romântica ou uma visita à família, a Marazul é seu endereço em Londrina.
+
+FOOTER (rodapé)
+Logo + menu repetido
+Endereço:
+
+Rua [Nome da Rua], 000
+
+Bairro [Nome], Londrina, Paraná
+
+CEP 86000-000
+Contato:
+
++55 (43) 3000-0000
+
+contato@pousadamarazul.com.br
+Redes sociais: Instagram | Facebook | WhatsApp | E-mail
+Copyright: Copyright 2026 Pousada Marazul | Todos os direitos reservados
+
+SUGESTÕES DE METADADOS (SEO)
+Title tag: Pousada Marazul – Londrina/PR | Hospedagem com conforto, lazer e eventos
+Meta description: Pousada em Londrina-PR com acomodações confortáveis, café da manhã, Wi-Fi, piscina e espaço para eventos. Seu refúgio azul no norte do Paraná. Reserve já!
